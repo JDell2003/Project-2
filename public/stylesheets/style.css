@@ -31,7 +31,6 @@ a {
   margin-bottom: auto; /* Pushes the title to the top */
   flex-direction: column;
   width: 625px;
-  
 }
 
 .Images {
@@ -87,6 +86,7 @@ a {
   border: 1px solid black;
   border-radius: 15px;
   margin: 6px;
+  justify-content: center; /* centers content horizontally */
 }
 
 .descriptions {

@@ -5,6 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
+const mongoose = require('mongoose');
+// Connect to MongoDB
+
+mongoose.connect('mongodb+srv://Jasonp3443:Mason0205!@cluster0.39bbucw.mongodb.net/Users?retryWrites=true&w=majority&appName=Cluster0')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((err) => {
+    console.error('Failed to connect to MongoDB', err);
+  });
+
 // !
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

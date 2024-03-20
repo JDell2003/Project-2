@@ -6,9 +6,6 @@ const indexCtrl = require('../controller/index')
 router.get('/', indexCtrl.index);
 
 
-
-
-
 module.exports = router;
 
 

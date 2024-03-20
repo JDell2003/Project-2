@@ -9,9 +9,20 @@
         <img src="/images/Setting.png" alt="Setting Icon">
       </div>
 <div id="outfitsContainer">
+  <script src="/javascripts/index.js"></script>
+  <% urls.forEach(function(url) { %>
+    <div class="outfitsBorder">
+        <div class="Outfits">
+            <img src="<%= url %>">
+            <hr>
+            <p class="descriptions">Description: Outfit</p>
+        </div>
+    </div>
+<% }); %>
+
+
       <script src="/javascripts/index.js"></script>
     </div> 
-  
   <div class ="bttmLine">
   <hr>
   <a href="/newURL/new"><img src="/images/Add Button.png" alt="Add"></a>

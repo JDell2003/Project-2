@@ -8,9 +8,18 @@
   
 <div id="inputUrlBox">
     <div id="inputUrlField">
-        <div id="UrlContent">Paste Url Here<hr></div>
+        <div id="UrlContent">
+
+          <form action="/newURL/create" method="post">
+            <label for="urlInput">Enter URL:</label>
+            <input type="url" id="urlInput" name="imageUrl" required>
+            <button type="submit">Save URL</button>
+        </form>
+
+        </div>
     </div>
 </div>
+
   <div class ="bttmLine">
   <hr>
   <a href="/"><img src="/images/grey circle.png" alt="Add"></a>
