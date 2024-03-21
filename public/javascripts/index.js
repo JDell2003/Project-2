@@ -1,4 +1,4 @@
-// Example array of image URLs
+
 
 let PreLoadedImg = ['https://pngimg.com/uploads/suit/suit_PNG93253.png'];
 
@@ -34,9 +34,17 @@ function createOutfitElement(immageURLS) {
     }
 }
 
+function deleteOne(id) {
+    // All properties attached to req.params are strings!
+    id = parseInt(id);
+    // Find the index based on the id of the todo object
+    const idx = newURLModel.findIndex(newURLModel => newURLModel.id === id);
+    todos.splice(idx, 1);
+  }
+
 createOutfitElement(immageURLS);
 
-module.exports = immageURLS;
-
-// Sample Demo
-// ,'https://i.pinimg.com/originals/11/09/9b/11099b37d35e4a5cbb91203f27bf753b.png','https://www.pngall.com/wp-content/uploads/5/Shirt-PNG-High-Quality-Image.png','https://i.pinimg.com/originals/8d/de/4b/8dde4ba5b7507ab9a1693b8f25646385.png','https://i.pinimg.com/originals/44/76/6c/44766c5b579bc65699fb42d155a16ab8.png'
+module.exports = {
+    createOutfitElement,
+    deleteOne
+  };

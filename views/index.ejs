@@ -10,13 +10,23 @@
       </div>
 <div id="outfitsContainer">
   <script src="/javascripts/index.js"></script>
-  <% urls.forEach(function(url) { %>
+
+  <% data.forEach(function(url) { %>
     <div class="outfitsBorder">
+
+    <div class="DeleteOutfit">
+      <form action="/<%= url._id %>?_method=DELETE" 
+        method="POST">
+        <button id="button" type="submit"><img src="/images/deleteOutfitPng.png" alt="Delete Outfit"></button>  
+      </form>
+    </div>
+      
         <div class="Outfits">
-            <img src="<%= url %>">
+            <img src="<%= url.imageUrl %>">
             <hr>
             <p class="descriptions">Description: Outfit</p>
         </div>
+      
     </div>
 <% }); %>
 

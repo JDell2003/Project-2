@@ -147,8 +147,53 @@ a {
   height: 20px;
   width: auto; /* Let the width adjust automatically to maintain aspect ratio */
   margin-top:-25px; 
-  padding-left:17px;
+  padding-left:29px;
   padding-right:618px;
   padding-top:10px;
   padding-bottom:10px;
 }
+
+.DeleteOutfit  {
+  margin-left: 7px;
+}
+
+.DeleteOutfit img {
+  position:relative;
+  height: 10px;
+  width: auto;
+  padding:0px;
+  margin-left: -7px;
+  margin-right: 1px;
+  margin-top: -3px;
+  margin-bottom: 59px;
+  opacity: 0;
+}
+
+.DeleteOutfit:hover img {
+  position:relative;
+  height: 10px;
+  width: auto;
+  padding:0px;
+  margin-left: -7px;
+  margin-right: 1px;
+  margin-top: -3px;
+  margin-bottom: 59px;
+  opacity: .9;
+}
+
+ .DeleteOutfit button {
+  position: absolute; /* Set the button to absolute positioning */
+  z-index: 1; /* Ensure the button appears above other content */
+  margin-left: -27px;
+  margin-right: 1px;
+  margin-top: 1px;
+  margin-bottom: 59px;
+  height: 12px;
+  width: 22px;
+  border: 0px black ;
+  background-color: transparent;
+ }
+
+   
+
+ 
