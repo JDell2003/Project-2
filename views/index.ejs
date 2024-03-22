@@ -14,18 +14,66 @@
   <% data.forEach(function(url) { %>
     <div class="outfitsBorder">
 
+
+
+
+
+
+
     <div class="DeleteOutfit">
       <form action="/<%= url._id %>?_method=DELETE" 
         method="POST">
         <button id="button" type="submit"><img src="/images/deleteOutfitPng.png" alt="Delete Outfit"></button>  
       </form>
     </div>
-      
+
+    <div class="addDescription">
+      <form action="/update/<%= url._id %>?_method=PUT" method="POST">
+          <button type="button" class="showInput">
+              <div class="pencil"><img src="/images/Edit comment pencil.png"></div>
+          </button>
+          <input type="text" id="descriptionInput" name="description" class="descriptionInput" placeholder="New Description Here">
+      </form>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var pencilIcons = document.querySelectorAll('.pencil');
+
+        pencilIcons.forEach(function(pencilIcon) {
+            var inputField = pencilIcon.closest('.outfitsBorder').querySelector('.descriptionInput');
+
+            pencilIcon.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the click event from propagating to the document
+                inputField.style.display = 'block'; // Show the input field
+            });
+
+            document.addEventListener('click', function(event) {
+                if (event.target !== inputField && !inputField.contains(event.target) && event.target !== pencilIcon) {
+                    inputField.style.display = 'none'; // Hide the input field when clicking outside of it
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+    
         <div class="Outfits">
             <img src="<%= url.imageUrl %>">
             <hr>
-            <p class="descriptions">Description: Outfit</p>
+
+ 
+        <div id ="descriptionsBorder">
+            <p class="descriptions"><strong>Description:</strong> <%= url.description %></p>
         </div>
+  </div>
+
+      
       
     </div>
 <% }); %>

@@ -7,8 +7,13 @@ const urlSchema = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: true
+    },
+    description: {
+        type: String,
+        required: true
     }
 });
+    
 
 const URLModel = mongoose.model('URL', urlSchema);
 

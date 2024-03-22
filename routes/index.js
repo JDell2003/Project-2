@@ -7,6 +7,7 @@ router.get('/', indexCtrl.index);
 
 router.delete('/:id', indexCtrl.delete);
 
+router.put('/update/:id', indexCtrl.update);
 
 module.exports = router;
 

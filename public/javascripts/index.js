@@ -34,17 +34,9 @@ function createOutfitElement(immageURLS) {
     }
 }
 
-function deleteOne(id) {
-    // All properties attached to req.params are strings!
-    id = parseInt(id);
-    // Find the index based on the id of the todo object
-    const idx = newURLModel.findIndex(newURLModel => newURLModel.id === id);
-    todos.splice(idx, 1);
-  }
-
 createOutfitElement(immageURLS);
 
 module.exports = {
     createOutfitElement,
-    deleteOne
+    
   };
